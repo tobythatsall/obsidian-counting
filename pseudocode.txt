@@ -1,0 +1,2 @@
+if user picks {user option} const output = Math.{user option}
+return output
