@@ -1,2 +1,4 @@
-if user picks {user option} const output = Math.{user option}
-return output
+code block with user defining values (calculation)
+executes function calculate (inputValue:number, userMethod:string) {
+			const outPut = math.evaluate(`${inputValue} ${userMethod} 1`);
+			return outPut	

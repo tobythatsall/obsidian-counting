@@ -1,5 +1,4 @@
 import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Setting } from 'obsidian';
-import { evaluate, add, multiply, chain } from 'mathjs';
 import * as math from 'mathjs';
 
 // Remember to rename these classes and interfaces!
@@ -76,8 +75,8 @@ export default class MyPlugin extends Plugin {
 		this.registerInterval(window.setInterval(() => console.log('setInterval'), 5 * 60 * 1000));
 
 		// The calculator
-		function calculate (inputValue:number, userMethod:string) {
-			const outPut = math.evaluate(`${inputValue} ${userMethod} 1`);
+		function calculate (inputValue1: number, inputValue2: number, userMethod: string) {
+			const outPut = math.evaluate(`${inputValue1} ${userMethod} ${inputValue2}`);
 			return outPut	
 		}
 		
