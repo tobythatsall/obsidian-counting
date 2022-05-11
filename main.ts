@@ -25,8 +25,6 @@ export default class MyPlugin extends Plugin {
 		});
 		// Perform additional things with the ribbon
 		ribbonIconEl.addClass('my-plugin-ribbon-class');
-		let inputValue = 100;
-		let userMethod = '+';
 
 		// This adds a simple command that can be triggered anywhere
 		this.addCommand({
@@ -78,8 +76,11 @@ export default class MyPlugin extends Plugin {
 		this.registerInterval(window.setInterval(() => console.log('setInterval'), 5 * 60 * 1000));
 
 		// The calculator
-		const outPut = math.evaluate(`${inputValue} ${userMethod} 1`);
-		return outPut
+		function calculate (inputValue:number, userMethod:string) {
+			const outPut = math.evaluate(`${inputValue} ${userMethod} 1`);
+			return outPut	
+		}
+		
 	}
 
 
